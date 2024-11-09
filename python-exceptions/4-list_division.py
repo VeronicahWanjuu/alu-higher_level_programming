@@ -2,7 +2,9 @@
 # Divides element by element 2 lists
 # Return: new list
 
+
 def list_division(my_list_1, my_list_2, list_length):
+   
     new_list = []
     for i in range(list_length):
         try:

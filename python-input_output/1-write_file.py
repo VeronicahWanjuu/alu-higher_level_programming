@@ -1,17 +1,20 @@
 #!/usr/bin/python3
-"""Defines a function that writes a string to a text file."""
+# 1-write_file.py
+"""This is a python file that
+writes to a file, creates the file
+if it doesn't exist, creates it, also
+overwrites the content of the file if
+it exists
+"""
 
 
 def write_file(filename="", text=""):
-    """Writes a string to a text and returns num of char.
-    :param filename: the name of the file to be writen into
-    :type(filename) str:
-    :param text: the text to be writen to the file.
-    :type(text) str:
-    :returns: the number of char writeen
+    """This is the function doing the
+    creation of the file and writing into
+    it and making sure a new line is
+    appended to the end of the string
     """
-    with open(filename, mode='w', encoding='utf') as f:
-        return f.write(text)
-
-
-#print(write_file("asdf", "this is what i want to check for"))
+    with open(filename, mode="w", encoding="utf-8") as f:
+        # if text[len(text) - 1] != "\n": text += "\n"
+        num_char_written = f.write(text)
+        return num_char_written
